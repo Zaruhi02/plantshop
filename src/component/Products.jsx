@@ -30,13 +30,31 @@ const Products = () => {
     const Loading = () => {
         return (
             <>
-            Loading...
+                Loading...
             </>
         )
     }
 
     const ShowProducts = () => {
-        <div className="buttons"></div>
+        return (
+            <>
+                <div className="buttons d-flex justify-content-center mb-5 pb-5">
+                    <button className="btn btn-outline-dark me-2">All</button>
+                    <button className="btn btn-outline-dark me-2">Cacti & Succulents</button>
+                    <button className="btn btn-outline-dark me-2">Flowering Plants</button>
+                    <button className="btn btn-outline-dark me-2">Terrariums</button>
+                    <button className="btn btn-outline-dark me-2">Rubber Plant</button>
+                </div>
+                {filter.map((product) => {
+                    return (
+                        <>
+                        <div className="col-md-3"></div>
+                        </>
+                    )
+                })}
+            </>
+        )
+
     }
     return (
         <div>
